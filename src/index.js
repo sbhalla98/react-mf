@@ -1,20 +1,20 @@
 import React, { useEffect, useRef } from "react";
-import REmoteFile from "remote/Loading";
+// import REmoteFile from "remote/Loading";
 
 const App = () =>{
 
 
-    const divRef = useRef(null);
+    // const divRef = useRef(null);
 
-    useEffect(() => {
-        REmoteFile(divRef.current);
-        console.log("ss")
-    }, [])
+    // useEffect(() => {
+    //     REmoteFile(divRef.current);
+    //     console.log("ss")
+    // }, [])
     return (
         <h1>
             Hello world! I am using React
-            <div ref={divRef}></div>
-            <REmoteFile />
+            <div></div>
+            {/* <REmoteFile /> */}
         </h1>
     )
 }
