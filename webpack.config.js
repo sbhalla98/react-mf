@@ -2,8 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require('path');
 const { dependencies } = require("./package.json");
-const dotenv = require('dotenv');
-const webpack = require('webpack');
+// const dotenv = require('dotenv');
+// const webpack = require('webpack');
 
 
 // call dotenv and it will return an Object with a parsed key 
