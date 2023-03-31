@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 //call dotenv and it will return an Object with a parsed key 
 const env = dotenv.config().parsed;
-console.log(env,dotenv);
+console.log(env,dotenv,process.env.NODE_ENV);
   
 //reduce it to a nice object, the same as before
 const envKeys = env && Object.keys(env).reduce((prev, next) => {
@@ -16,9 +16,10 @@ const envKeys = env && Object.keys(env).reduce((prev, next) => {
   return prev;
 }, {});
 
-module.exports = {
-  entry: './index.js',
-  mode: "production",
+
+const config = {
+    entry: './index.js',
+//   mode: "production",
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: "[name].js",
@@ -64,4 +65,10 @@ module.exports = {
           }
     }),
   ]
+}
+
+module.exports = (env, argv) => {
+    console.log(env, argv);
+    return config
+  
 };
