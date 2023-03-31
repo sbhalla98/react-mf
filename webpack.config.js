@@ -40,7 +40,7 @@ module.exports = {
         name: 'host',
         filename: "host.js",
         remotes:{
-            remote: "remote@http://localhost:8080/app.js"
+            remote: "remote@https://react-mf-remote.vercel.app/app.js"
         },
         shared: {
             ...dependencies,

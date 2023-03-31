@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-// import REmoteFile from "remote/Loading";
+import REmoteFile from "remote/Loading";
 
 const App = () =>{
 
@@ -14,7 +14,7 @@ const App = () =>{
         <h1>
             Hello world! I am using React
             <div></div>
-            {/* <REmoteFile /> */}
+            <REmoteFile />
         </h1>
     )
 }
