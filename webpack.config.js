@@ -8,9 +8,10 @@ const webpack = require('webpack');
 
 //call dotenv and it will return an Object with a parsed key 
 const env = dotenv.config().parsed;
+console.log(env,dotenv);
   
 //reduce it to a nice object, the same as before
-const envKeys = Object.keys(env).reduce((prev, next) => {
+const envKeys = env && Object.keys(env).reduce((prev, next) => {
   prev[`process.env.${next}`] = JSON.stringify(env[next]);
   return prev;
 }, {});
