@@ -17,7 +17,7 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 
 module.exports = {
   entry: './index.js',
-  mode: process.env.MY_ENV,
+  mode: "production",
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: "[name].js",
